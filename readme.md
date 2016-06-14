@@ -15,7 +15,8 @@ Go to your project folder then  `shift + right click`  and open command prompt .
 -`npm install --save-dev gulp`
 -`npm init`
 
-
+gem install compass
+gem install susy
 
 ==========================================
 ##Gulp Plugin's installation
