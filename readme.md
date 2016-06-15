@@ -17,7 +17,7 @@ Go to your project folder then  `shift + right click`  and open command prompt .
 
 gem install compass
 gem install susy
-
+gem install breakpoint
 ==========================================
 ##Gulp Plugin's installation
 
