@@ -4,16 +4,16 @@ This is basic starter bootstrap HTML Template for Quick Start. I am writting thi
 ##Getting Start
 You first need to sure that you have ruby and node installed into your system. 
 If not installed then, Install those program into your **windows** system. 
--[ruby](http://rubyinstaller.org/ "Ruby For windows")  For **windows**. 
--[NodeJS](https://nodejs.org/en/ "NodeJS")
+- [ruby](http://rubyinstaller.org/ "Ruby For windows")  For **windows**. 
+- [NodeJS](https://nodejs.org/en/ "NodeJS")
 
 
 ##Init Project. 
 Go to your project folder then  `shift + right click`  and open command prompt . Run these command one by one to start your very first project.
 
--`npm install --global gulp-cli`
--`npm install --save-dev gulp`
--`npm init`
+- `npm install --global gulp-cli`
+- `npm install --save-dev gulp`
+- `npm init`
 
 gem install compass
 gem install susy
@@ -24,14 +24,14 @@ gem install breakpoint
 Install some important gulp plugin (if not installed into your project) to enhance our project. 
 Linux user may need to use `sudo`. 
 
--`npm install --save-dev gulp-uglify` 
--`npm install --save-dev gulp-autoprefixer`
--`npm install gulp-add-src --save-dev`
--`npm install gulp-sass --save-dev`
--`npm install gulp-compass --save-dev`
--`npm install --save-dev gulp-plumber`
--`npm install gulp-concat --save-dev`
--`npm install browser-sync --save-dev`
+- `npm install --save-dev gulp-uglify` 
+- `npm install --save-dev gulp-autoprefixer`
+- `npm install gulp-add-src --save-dev`
+- `npm install gulp-sass --save-dev`
+- `npm install gulp-compass --save-dev`
+- `npm install --save-dev gulp-plumber`
+- `npm install gulp-concat --save-dev`
+- `npm install browser-sync --save-dev`
 
 
 ##Create gulp task 
