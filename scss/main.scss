@@ -1,15 +1,34 @@
 @import "susy";
 @import "breakpoint";
 
+
 $susy: (
   columns: 12,
-  gutters: 1/4,
+  gutters: 0.45,
   math: fluid,
   output: float,
   gutter-position: inside,
 );
 
+/**
+ * Include some default Library 
+ *
+ */
+@include border-box-sizing;
 body {
     background: #ccc;
+}
+
+.democontent {
+    @include container(1170px);
+    .left_content {
+        @include span(6);
+    }
+    .right_content {
+        @include span(6);
+    }
+    .fullwidth {
+  @include span(12);
+  }
 }
 

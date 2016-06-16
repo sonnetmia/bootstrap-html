@@ -1,3 +1,42 @@
+/**
+ * Include some default Library 
+ *
+ */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   background: #ccc;
+}
+
+.democontent {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.democontent:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.democontent .left_content {
+  width: 50%;
+  float: left;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
+}
+.democontent .right_content {
+  width: 50%;
+  float: left;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
+}
+.democontent .fullwidth {
+  width: 100%;
+  float: left;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
 }

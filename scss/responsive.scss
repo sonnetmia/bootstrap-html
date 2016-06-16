@@ -1,0 +1,36 @@
+@import "susy";
+@import "breakpoint";
+
+$media1920: max-width 1920px;
+$media1280: max-width 1280px;
+$media1024: max-width 1024px;
+$media980: max-width 980px;
+$media900: max-width 900px;
+$media800: max-width 800px;
+$media768: max-width 768px;
+$media640: max-width 640px;
+$media600: max-width 600px;
+$media480: max-width 480px;
+$media360: max-width 360px;
+$media320: max-width 320px;
+
+/**
+ * Making the website Responsive 
+ * decorated by Md Ariful Islam
+ * Including some default library
+ */
+
+@include border-box-sizing;
+
+/**
+ * breakpoint added for 980px of width device
+ * @param  string $media980 
+ * @return css           css code with sass
+ */
+@include breakpoint($media980) {
+ .demo {
+    font-size: 16px;
+ }
+}
+
+

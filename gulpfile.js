@@ -28,9 +28,9 @@ gulp.task('default', function() {
 });
  
 gulp.task('uglify', function() {
-  return gulp.src('lib/*.js')
+  return gulp.src('js/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('js'));
 });
 
 // Static server
@@ -41,4 +41,5 @@ gulp.task('browser-sync', function() {
         }
     });
     gulp.watch("*.html").on('change', browserSync.reload);
+    gulp.watch("*.css").on('change', browserSync.reload);
 });
