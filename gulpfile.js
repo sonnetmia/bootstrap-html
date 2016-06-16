@@ -5,41 +5,86 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     compass = require('gulp-compass'),
     plumber = require('gulp-plumber'),
+    rename = require('gulp-rename'),
     watch = require('gulp-watch'), 
-    browserSync = require('browser-sync').create(),   
+    browserSync = require('browser-sync'), 
+    reload = browserSync.reload,
     addsrc = require('gulp-add-src');
 
-/*
-
-Common Usage of 
-.pipe(plumber({
+// ///////////////////////////////////////
+// Managing All js files 
+// ///////////////////////////////////////
+gulp.task('scripts', function() {
+    gulp.src(['js/*.js', '!js/*.min.js'])
+    .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);
         this.emit('end');
-    }}))
-
-    .pipe(plumber.stop())
-    
-
- */
-
-gulp.task('default', function() {
-  // place code for your default task here
-});
- 
-gulp.task('uglify', function() {
-  return gulp.src('js/*.js')
+     }}))  
+    .pipe(rename({suffix:'.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('js'));
+    .pipe(plumber.stop())
+    .pipe(gulp.dest('js'))
+    .pipe(reload({stream:true}));
 });
 
-// Static server
+// ///////////////////////////////////////
+// Compass Sass Scss Tasks 
+// ///////////////////////////////////////
+
+gulp.task('compass',function(){
+    gulp.src('scss/*.scss')
+    .pipe(plumber({
+          errorHandler: function (error) {
+            console.log(error.message);
+            this.emit('end');
+    }}))
+    .pipe(compass({
+        config_file: './config.rb',
+        css: 'css',
+        sass: 'scss',
+        image: 'images',
+        require: ['susy']
+    }))
+    .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+    }))
+    .pipe(plumber.stop())
+    .pipe(gulp.dest('css'))
+    .pipe(reload({stream:true}));
+
+});
+// ///////////////////////////////////////
+// html Task Runner for LIVE RELOAD 
+// ///////////////////////////////////////
+
+gulp.task('html',function(){
+    gulp.src('*.html')
+    .pipe(reload({stream:true}));
+});
+
+// ///////////////////////////////////////
+// Static server for LIVE RELOAD 
+// ///////////////////////////////////////
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
             baseDir: "./"
         }
     });
-    gulp.watch("*.html").on('change', browserSync.reload);
-    gulp.watch("*.css").on('change', browserSync.reload);
 });
+// ///////////////////////////////////////
+// Watching Recommended Task For change
+// ///////////////////////////////////////
+gulp.task('watch',function(){
+    gulp.watch(['js/*.js','!js/*.min..js'],['scripts']);
+    gulp.watch('scss/*.scss',['compass']);
+    gulp.watch('*.html',['html']);
+});
+
+// ///////////////////////////////////////
+// Setting up Default Tasks. 
+// ///////////////////////////////////////
+
+gulp.task('default', ['scripts','compass','browser-sync','watch']);

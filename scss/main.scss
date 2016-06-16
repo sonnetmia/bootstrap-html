@@ -16,7 +16,7 @@ $susy: (
  */
 @include border-box-sizing;
 body {
-    background: #ccc;
+    background: green;    
 }
 
 .democontent {
@@ -32,3 +32,7 @@ body {
   }
 }
 
+.demo {
+  border-radius:10px;
+  box-shadow:2px #ccc;
+}

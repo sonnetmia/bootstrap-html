@@ -18,7 +18,8 @@ Go to your project folder then  `shift + right click`  and open command prompt .
 gem install compass
 gem install susy
 gem install breakpoint
-==========================================
+
+
 ##Gulp Plugin's installation
 
 Install some important gulp plugin (if not installed into your project) to enhance our project. 
@@ -32,6 +33,7 @@ Linux user may need to use `sudo`.
 - `npm install --save-dev gulp-plumber`
 - `npm install gulp-concat --save-dev`
 - `npm install browser-sync --save-dev`
+- `npm install gulp-rename --save-dev`
 
 
 ##Create gulp task 

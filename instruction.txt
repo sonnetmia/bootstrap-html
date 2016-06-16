@@ -1,9 +1,0 @@
-border color : 41b7d8
-button color : 41b7d8
-Link Color: 41b7d8
-body background color : #fff
-
-
-Header and Footer Background color:: 
-
-01732219550
