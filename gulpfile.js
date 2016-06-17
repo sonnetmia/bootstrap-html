@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'), 
     browserSync = require('browser-sync'), 
     reload = browserSync.reload,
+    del = require('del'),
     addsrc = require('gulp-add-src');
 
 // ///////////////////////////////////////
@@ -74,13 +75,33 @@ gulp.task('browser-sync', function() {
         }
     });
 });
+
+
+// ////////////////////////////////////////////////
+// Build Tasks
+// // /////////////////////////////////////////////
+
+// clean out all files and folders from build folder
+gulp.task('build:clean', function (cb) {
+    del([
+        'vendor/**'
+    ], cb);
+});
+
+// task to create build directory of all files
+gulp.task('build:bootstrap', function(){
+    return gulp.src(['node_modules/bootstrap/dist/**'])
+    .pipe(gulp.dest('vendor/'));
+});
+
+
 // ///////////////////////////////////////
 // Watching Recommended Task For change
 // ///////////////////////////////////////
 gulp.task('watch',function(){
     gulp.watch(['js/*.js','!js/*.min..js'],['scripts']);
     gulp.watch('scss/*.scss',['compass']);
-    gulp.watch('*.html',['html']);
+    gulp.watch('**/*.html',['html']);
 });
 
 // ///////////////////////////////////////
