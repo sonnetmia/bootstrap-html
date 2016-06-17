@@ -25,15 +25,22 @@ gem install breakpoint
 Install some important gulp plugin (if not installed into your project) to enhance our project. 
 Linux user may need to use `sudo`. 
 
-- `npm install --save-dev gulp-uglify` 
-- `npm install --save-dev gulp-autoprefixer`
+- `npm install gulp-uglify --save-dev` 
+- `npm install gulp-autoprefixer --save-dev`
 - `npm install gulp-add-src --save-dev`
 - `npm install gulp-sass --save-dev`
 - `npm install gulp-compass --save-dev`
-- `npm install --save-dev gulp-plumber`
 - `npm install gulp-concat --save-dev`
 - `npm install browser-sync --save-dev`
 - `npm install gulp-rename --save-dev`
+- `npm install del --save-dev`
+- `npm install gulp-plumber --save-dev`
+- `npm install gulp-watch --save-dev`
+
+## Some common library 
+- `npm install modernizr gulp-modernizr --save-dev`
+- `npm install bootstrap --save-dev`
+- `npm install bootstrap --save-dev`
 
 
 ##Create gulp task 

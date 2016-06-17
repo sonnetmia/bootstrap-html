@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'), 
     reload = browserSync.reload,
     del = require('del'),
+    modernizr = require('gulp-modernizr'),
     addsrc = require('gulp-add-src');
 
 // ///////////////////////////////////////
@@ -21,8 +22,8 @@ gulp.task('scripts', function() {
       errorHandler: function (error) {
         console.log(error.message);
         this.emit('end');
-     }}))  
-    .pipe(rename({suffix:'.min'}))
+     }}))
+    .pipe(rename({suffix:'.min'}))    
     .pipe(uglify())
     .pipe(plumber.stop())
     .pipe(gulp.dest('js'))
@@ -84,14 +85,14 @@ gulp.task('browser-sync', function() {
 // clean out all files and folders from build folder
 gulp.task('build:clean', function (cb) {
     del([
-        'vendor/**'
+        'lib/**'
     ], cb);
 });
 
 // task to create build directory of all files
 gulp.task('build:bootstrap', function(){
     return gulp.src(['node_modules/bootstrap/dist/**'])
-    .pipe(gulp.dest('vendor/'));
+    .pipe(gulp.dest('lib/'));
 });
 
 

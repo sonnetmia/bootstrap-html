@@ -13,7 +13,29 @@
  * @return css           css code with sass
  */
 @media (max-width: 980px) {
-  .demo {
-    font-size: 16px;
+  .democontent {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .democontent:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  .democontent .left_content {
+    width: 152.63158%;
+    float: left;
+    margin-right: 5.26316%;
+  }
+  .democontent .right_content {
+    width: 152.63158%;
+    float: left;
+    margin-right: 5.26316%;
+  }
+  .democontent .fullwidth {
+    width: 310.52632%;
+    float: left;
+    margin-right: 5.26316%;
   }
 }

@@ -7,7 +7,7 @@
 }
 
 body {
-  background: green;
+  background: #fff;
 }
 
 .democontent {
@@ -21,7 +21,7 @@ body {
   clear: both;
 }
 .democontent .left_content {
-  width: 50%;
+  width: 100%;
   float: left;
   padding-left: 1.2931%;
   padding-right: 1.2931%;

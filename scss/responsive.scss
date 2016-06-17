@@ -28,7 +28,17 @@ $media320: max-width 320px;
  * @return css           css code with sass
  */
 @include breakpoint($media980) {
- .demo {
-    font-size: 16px;
- }
+ .democontent {
+    @include container(980px);
+    .left_content {
+        @include span(6);
+    }
+    .right_content {
+        @include span(6);
+    }
+    .fullwidth {
+        @include span(12);
+    }
+}
+
 }
