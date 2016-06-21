@@ -1,5 +1,15 @@
+@import "compass";
 @import "susy";
 @import "breakpoint";
+
+$susy: (
+  columns: 12,
+  gutters: 0.45,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
 
 $media1920: max-width 1920px;
 $media1280: max-width 1280px;
@@ -28,10 +38,9 @@ $media320: max-width 320px;
  * @return css           css code with sass
  */
 @include breakpoint($media980) {
- .democontent {
-    @include container(980px);
+ .democontent {    
     .left_content {
-        @include span(6);
+        @include span(12);
     }
     .right_content {
         @include span(6);

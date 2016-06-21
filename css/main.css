@@ -3,6 +3,8 @@
  *
  */
 *, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -11,6 +13,9 @@ body {
 }
 
 .democontent {
+  transition: all 0.2s ease;
+  display: flex;
+  border-radius: 10px;
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
@@ -39,7 +44,4 @@ body {
   padding-right: 1.2931%;
 }
 
-.demo {
-  border-radius: 10px;
-  box-shadow: 2px #ccc;
-}
+/*# sourceMappingURL=main.css.map */

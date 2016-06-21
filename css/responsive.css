@@ -4,6 +4,8 @@
  * Including some default library
  */
 *, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -13,29 +15,24 @@
  * @return css           css code with sass
  */
 @media (max-width: 980px) {
-  .democontent {
-    max-width: 980px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .democontent:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
   .democontent .left_content {
-    width: 152.63158%;
+    width: 100%;
     float: left;
-    margin-right: 5.26316%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
   .democontent .right_content {
-    width: 152.63158%;
+    width: 50%;
     float: left;
-    margin-right: 5.26316%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
   .democontent .fullwidth {
-    width: 310.52632%;
+    width: 100%;
     float: left;
-    margin-right: 5.26316%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 }
+
+/*# sourceMappingURL=responsive.css.map */

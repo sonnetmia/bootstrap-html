@@ -40,7 +40,9 @@ Linux user may need to use `sudo`.
 ## Some common library 
 - `npm install modernizr gulp-modernizr --save-dev`
 - `npm install bootstrap --save-dev`
-- `npm install bootstrap --save-dev`
+- `npm install jquery --save-dev`
+- `npm install owl.carousel --save-dev`
+- `npm install owl.carousel --save-dev`
 
 
 ##Create gulp task 

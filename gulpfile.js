@@ -48,11 +48,8 @@ gulp.task('compass',function(){
         image: 'images',
         require: ['susy']
     }))
-    .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-    }))
     .pipe(plumber.stop())
+    .pipe(autoprefixer())    
     .pipe(gulp.dest('css'))
     .pipe(reload({stream:true}));
 
@@ -89,12 +86,22 @@ gulp.task('build:clean', function (cb) {
     ], cb);
 });
 
-// task to create build directory of all files
+
 gulp.task('build:bootstrap', function(){
     return gulp.src(['node_modules/bootstrap/dist/**'])
     .pipe(gulp.dest('lib/'));
 });
 
+gulp.task('build:jquery', function(){
+    return gulp.src(['node_modules/jquery/dist/jquery.min.js'])
+    .pipe(gulp.dest('lib/js'));
+});
+gulp.task('build:owl', function(){
+    return gulp.src(['node_modules/owl.carousel/dist/**'])
+    .pipe(gulp.dest('lib/owl'));
+});
+
+gulp.task('build', ['build:bootstrap', 'build:jquery','build:owl']);
 
 // ///////////////////////////////////////
 // Watching Recommended Task For change

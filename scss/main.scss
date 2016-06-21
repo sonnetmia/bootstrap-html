@@ -1,3 +1,4 @@
+@import "compass";
 @import "susy";
 @import "breakpoint";
 
@@ -20,6 +21,9 @@ body {
 }
 
 .democontent {
+  transition: all 0.2s ease;
+  display: flex;
+  border-radius: 10px;
     @include container(1170px);
     .left_content {
         @include span(12);
@@ -32,7 +36,8 @@ body {
     }
 }
 
-.demo {
-  border-radius:10px;
-  box-shadow:2px #ccc;
-}
+
+
+
+
+
