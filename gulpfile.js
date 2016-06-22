@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 // Managing All js files 
 // ///////////////////////////////////////
 gulp.task('scripts', function() {
-    gulp.src(['js/*.js', '!js/*.min.js'])
+    gulp.src(['javascripts/**/*.js', '!javascripts/**/*.min.js'])
     .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);
@@ -86,12 +86,6 @@ gulp.task('build:clean', function (cb) {
     ], cb);
 });
 
-
-gulp.task('build:bootstrap', function(){
-    return gulp.src(['node_modules/bootstrap/dist/**'])
-    .pipe(gulp.dest('lib/'));
-});
-
 gulp.task('build:jquery', function(){
     return gulp.src(['node_modules/jquery/dist/jquery.min.js'])
     .pipe(gulp.dest('lib/js'));
@@ -101,19 +95,24 @@ gulp.task('build:owl', function(){
     .pipe(gulp.dest('lib/owl'));
 });
 
-gulp.task('build', ['build:bootstrap', 'build:jquery','build:owl']);
+gulp.task('build', [ 'build:jquery','build:owl']);
 
 // ///////////////////////////////////////
 // Watching Recommended Task For change
 // ///////////////////////////////////////
 gulp.task('watch',function(){
-    gulp.watch(['js/*.js','!js/*.min..js'],['scripts']);
+    gulp.watch(['js/**/*.js','!js/**/*.min..js'],['scripts']);
     gulp.watch('scss/*.scss',['compass']);
     gulp.watch('**/*.html',['html']);
 });
+
+// Clean Library
+
+gulp.task('reset',['build:clean']);
 
 // ///////////////////////////////////////
 // Setting up Default Tasks. 
 // ///////////////////////////////////////
 
-gulp.task('default', ['scripts','compass','browser-sync','watch']);
+
+gulp.task('default', ['build','scripts','compass','browser-sync','watch']);

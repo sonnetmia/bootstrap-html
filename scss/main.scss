@@ -1,7 +1,16 @@
 @import "compass";
 @import "susy";
 @import "breakpoint";
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
 
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
+// Importing our custom variables for this template
+@import "variables";
 
 $susy: (
   columns: 12,
@@ -11,11 +20,8 @@ $susy: (
   gutter-position: inside,
 );
 
-/**
- * Include some default Library 
- *
- */
 @include border-box-sizing;
+
 body {
     background: #fff;    
 }
@@ -38,6 +44,7 @@ body {
 
 
 
+// Add Extra Custom Responsive Responsive Code 
 
-
+@import "responsive"; 
 

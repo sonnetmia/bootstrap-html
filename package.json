@@ -4,11 +4,9 @@
   "description": "Getting Started with bootstrap front end development project",
   "main": "gulpfile.js",
   "dependencies": {
-    "bootstrap": "^3.3.6",
     "gulp": "^3.9.1"
   },
   "devDependencies": {
-    "bootstrap": "^3.3.6",
     "browser-sync": "^2.13.0",
     "del": "^2.2.0",
     "gulp": "^3.9.1",

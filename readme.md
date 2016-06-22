@@ -1,5 +1,5 @@
 #Introduction
-This is basic starter bootstrap HTML Template for Quick Start. I am writting this instruction for **windows** user. But it will work for other OS user like OSX or Linux based distro. I am using Bootstrap 3 for this project. 
+This is basic starter bootstrap HTML Template for Quick Start. I am writting this instruction for **windows** user. But it will work for other OS user like OSX or Linux based distro. Bootstrap 3 will be used for this starter package. 
 
 ##Getting Start
 You first need to sure that you have ruby and node installed into your system. 
@@ -7,17 +7,22 @@ If not installed then, Install those program into your **windows** system.
 - [ruby](http://rubyinstaller.org/ "Ruby For windows")  For **windows**. 
 - [NodeJS](https://nodejs.org/en/ "NodeJS")
 
+After isntalling ruby , let's run command prompt and install some gem. These gem's will be used in this project's. 
 
-##Init Project. 
+- `gem install sass`
+- `gem install compass`
+- `gem install susy`
+- `gem install breakpoint`
+- `gem install bootstrap-sass`
+
+
+##Create Project. 
 Go to your project folder then  `shift + right click`  and open command prompt . Run these command one by one to start your very first project.
 
 - `npm install --global gulp-cli`
 - `npm install --save-dev gulp`
 - `npm init`
 
-gem install compass
-gem install susy
-gem install breakpoint
 
 
 ##Gulp Plugin's installation
@@ -39,7 +44,6 @@ Linux user may need to use `sudo`.
 
 ## Some common library 
 - `npm install modernizr gulp-modernizr --save-dev`
-- `npm install bootstrap --save-dev`
 - `npm install jquery --save-dev`
 - `npm install owl.carousel --save-dev`
 - `npm install owl.carousel --save-dev`
