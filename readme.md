@@ -41,6 +41,7 @@ Finally , Keep watch your project by type `gulp`
 
 
 ##Gulp Plugin's installation
+Ignore this step if you used this repository as your starter project. If not Then just for you here I have used this plugin (Node Packages) for this project. 
 
 Install some important gulp plugin (if not installed into your project) to enhance our project. 
 Linux user may need to use `sudo`. 
