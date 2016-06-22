@@ -7347,38 +7347,6 @@ body {
   background: #fff;
 }
 
-.democontent {
-  transition: all 0.2s ease;
-  display: flex;
-  border-radius: 10px;
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.democontent:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-.democontent .left_content {
-  width: 100%;
-  float: left;
-  padding-left: 1.29310345%;
-  padding-right: 1.29310345%;
-}
-.democontent .right_content {
-  width: 50%;
-  float: left;
-  padding-left: 1.29310345%;
-  padding-right: 1.29310345%;
-}
-.democontent .fullwidth {
-  width: 100%;
-  float: left;
-  padding-left: 1.29310345%;
-  padding-right: 1.29310345%;
-}
-
 /**
  * breakpoint added for 980px of width device
  * @param  string $media980 

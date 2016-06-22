@@ -26,21 +26,7 @@ body {
     background: #fff;    
 }
 
-.democontent {
-  transition: all 0.2s ease;
-  display: flex;
-  border-radius: 10px;
-    @include container(1170px);
-    .left_content {
-        @include span(12);
-    }
-    .right_content {
-        @include span(6);
-    }
-    .fullwidth {
-        @include span(12);
-    }
-}
+
 
 
 

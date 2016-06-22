@@ -1,6 +1,13 @@
 #Introduction
 This is basic starter bootstrap HTML Template for Quick Start. I am writting this instruction for **windows** user. But it will work for other OS user like OSX or Linux based distro. Bootstrap 3 will be used for this starter package. 
 
+#Feature used 
+- Bootstrap 3
+- owl carousel
+- Modernizr 
+
+
+
 ##Getting Start
 You first need to sure that you have ruby and node installed into your system. 
 If not installed then, Install those program into your **windows** system. 
@@ -13,16 +20,24 @@ After isntalling ruby , let's run command prompt and install some gem. These gem
 - `gem install compass`
 - `gem install susy`
 - `gem install breakpoint`
-- `gem install bootstrap-sass`
+- `gem install bootstrap-sass`  
 
 
-##Create Project. 
-Go to your project folder then  `shift + right click`  and open command prompt . Run these command one by one to start your very first project.
+Need NodeJs installed to run these code . before run these code , please install NodeJs
 
 - `npm install --global gulp-cli`
 - `npm install --save-dev gulp`
-- `npm init`
 
+##Quick Usage 
+Clone this repository into your project location. 
+- `git clone https://github.com/ArifulIslamSonnet/bootstrap-html.git my-project` 
+
+Browse to your project folder then  `shift + right click`  and open command prompt . Run 
+- `npm install`
+
+Wait for a while, It will downlaod all neccessary package. 
+
+Finally , Keep watch your project by type `gulp`
 
 
 ##Gulp Plugin's installation
@@ -33,6 +48,7 @@ Linux user may need to use `sudo`.
 - `npm install gulp-uglify --save-dev` 
 - `npm install gulp-autoprefixer --save-dev`
 - `npm install gulp-add-src --save-dev`
+- `npm install gulp-remote-src --save-dev`
 - `npm install gulp-sass --save-dev`
 - `npm install gulp-compass --save-dev`
 - `npm install gulp-concat --save-dev`
@@ -43,27 +59,17 @@ Linux user may need to use `sudo`.
 - `npm install gulp-watch --save-dev`
 
 ## Some common library 
-- `npm install modernizr gulp-modernizr --save-dev`
+
 - `npm install jquery --save-dev`
 - `npm install owl.carousel --save-dev`
 - `npm install owl.carousel --save-dev`
 
 
-##Create gulp task 
-First, Create `gulpfile.js` file into your project root directory. 
+#Credit 
+1. [LevelUpTuts](https://www.youtube.com/watch?v=fbVD32w1oTo&list=PL2CB1F80266E986EA)
+2. [Joel Longie](https://github.com/joellongie/jlgulp)
 
-```js
-var gulp = require('gulp');
-gulp.task('default', function() {
-  // place code for your default task here
-});
-```
-
-##Usage 
-Clone or download the repository from github. 
-Enter your project folder and open command prompt then run `npm install` . All files and folder should be ready after creating project for the first time. 
-
-Then watch the project by run  `gulp`. But if you need to run specific command then look it into the gulpfile.js. 
+ 
 
 ###You are always welcome to suggest me. So, please suggest me to make it more firendly. 
 
