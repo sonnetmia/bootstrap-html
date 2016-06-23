@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),    
     sass = require('gulp-sass'),
     compass = require('gulp-compass'),
-    plumber = require('gulp-plumber'),
+    plumber = require('gulp-plumber'),    
     rename = require('gulp-rename'),
     watch = require('gulp-watch'), 
     browserSync = require('browser-sync'), 
@@ -80,11 +80,17 @@ gulp.task('browser-sync', function() {
 // // /////////////////////////////////////////////
 
 gulp.task('bootstrapJs', function(){
-gulp.src(['vendor/**/*.js','!vendor/**/*.min.js'])
+gulp.src(['node_modules/bootstrap-sass/assets/javascripts/**/*.js','!node_modules/bootstrap-sass/assets/javascripts/**/*.min.js'])
 .pipe(rename({suffix:'.min'}))        
 .pipe(uglify())  
 .pipe(gulp.dest('js'));
+
 });
+gulp.task('bootstrapfonts', function(){
+gulp.src(['node_modules/bootstrap-sass/assets/fonts/**'])
+.pipe(gulp.dest('fonts'));
+});
+
 gulp.task('build:jquery', function(){
     return gulp.src(['node_modules/jquery/dist/jquery.min.js'])
     .pipe(gulp.dest('js'));
@@ -101,7 +107,7 @@ gulp.task('build:owl', function(){
     .pipe(gulp.dest('js/owl'));
 });
 
-gulp.task('build', ['bootstrapJs','build:jquery','build:modernizr','build:owl']);
+gulp.task('build', ['bootstrapJs','bootstrapfonts','build:jquery','build:modernizr','build:owl']);
 
 // ///////////////////////////////////////
 // Watching Recommended Task For change

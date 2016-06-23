@@ -62,10 +62,14 @@ Linux user may need to use `sudo`.
 
 ## Some common library 
 
-- `npm install jquery --save-dev`
+- `npm install jquery@1.x --save-dev`
 - `npm install owl.carousel --save-dev`
-- `npm install owl.carousel --save-dev`
+- `npm install bootstrap-sass --save-dev`
 
+If you face some dependency issue then run into windows command: 
+
+- `npm install -g graceful-fs@4 minimatch@3 lodash@4 node-gyp@3`
+- `npm rebuild -g graceful-fs@4 minimatch@3 lodash@4 node-gyp@3`
 
 #Credit 
 1. [LevelUpTuts](https://www.youtube.com/watch?v=fbVD32w1oTo&list=PL2CB1F80266E986EA)
