@@ -33,6 +33,7 @@ Clone this repository into your project location.
 - `git clone https://github.com/ArifulIslamSonnet/bootstrap-html.git my-project` 
 
 Browse to your project folder then  `shift + right click`  and open command prompt . Run 
+- `npm install --global gulp-cli`
 - `npm install`
 
 Wait for a while, It will downlaod all neccessary package. 
